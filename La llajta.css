@@ -4,6 +4,107 @@
     box-sizing: border-box;
 }
 
+/* RESET CRÍTICO */
+input.form-control, 
+textarea.form-control {
+    all: initial; /* Reset total */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+/* ESTILOS DEL FORMULARIO */
+.modern-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em;
+    background: rgba(249, 246, 241, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.modern-form .form-group {
+    margin-bottom: 1.5em;
+}
+
+.modern-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+ 
+    font-family: 'Quicksand', sans-serif;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd !important;
+    border-radius: 6px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    background-color: white !important;
+    color: #333 !important;
+    transition: all 0.3s;
+    display: block;
+}
+
+.form-control:focus {
+   
+    outline: none !important;
+    box-shadow: 0 0 5px rgba(18, 140, 126, 0.5) !important;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.modern-button {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.modern-button:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Asegurar que nada tape el formulario */
+.main-section {
+    position: relative;
+}
+
+.main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
 :root {
     --primary: #243B53;
     --secondary: #F4C542;
